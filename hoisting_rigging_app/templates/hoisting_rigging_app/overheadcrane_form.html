@@ -1,0 +1,64 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'hoisting_rigging_app_overheadCrane_list' %}">
+    overheadCrane Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="equipment_name">equipment_name: </label>
+      <input class="form-control col-sm-10"
+         id="equipment_name" type="text"
+         name="equipment_name" value="{{ object.equipment_name }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+      <input class="form-control col-sm-10"
+         id="last_updated" type="datetime-local"
+         name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="created">created: </label>
+      <input class="form-control col-sm-10"
+         id="created" type="datetime-local"
+         name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="id">id: </label>
+      <input class="form-control col-sm-10"
+         id="id" type="text"
+         name="id" value="{{ object.id }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="equipment_code">equipment_code: </label>
+      <input class="form-control col-sm-10"
+         id="equipment_code" type="text"
+         name="equipment_code" value="{{ object.equipment_code }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="auxiliary_hook_capacity">auxiliary_hook_capacity: </label>
+      <input class="form-control col-sm-10"
+         id="auxiliary_hook_capacity" type="text"
+         name="auxiliary_hook_capacity" value="{{ object.auxiliary_hook_capacity }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="main_hook_capacity">main_hook_capacity: </label>
+      <input class="form-control col-sm-10"
+         id="main_hook_capacity" type="text"
+         name="main_hook_capacity" value="{{ object.main_hook_capacity }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="appFormId">appFormId: </label>
+      {{ form.appFormId }}
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

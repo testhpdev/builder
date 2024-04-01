@@ -1,0 +1,82 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'hoisting_rigging_app_tools_hardware_list' %}">
+    tools_hardware Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="capacity">capacity: </label>
+      <input class="form-control col-sm-10"
+         id="capacity" type="text"
+         name="capacity" value="{{ object.capacity }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+      <input class="form-control col-sm-10"
+         id="last_updated" type="datetime-local"
+         name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="weight">weight: </label>
+      <input class="form-control col-sm-10"
+         id="weight" type="text"
+         name="weight" value="{{ object.weight }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="tool_number">tool_number: </label>
+      <input class="form-control col-sm-10"
+         id="tool_number" type="text"
+         name="tool_number" value="{{ object.tool_number }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="description">description: </label>
+      <input class="form-control col-sm-10"
+         id="description" type="text"
+         name="description" value="{{ object.description }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="tension">tension: </label>
+      <input class="form-control col-sm-10"
+         id="tension" type="text"
+         name="tension" value="{{ object.tension }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="created">created: </label>
+      <input class="form-control col-sm-10"
+         id="created" type="datetime-local"
+         name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="id">id: </label>
+      <input class="form-control col-sm-10"
+         id="id" type="text"
+         name="id" value="{{ object.id }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="type">type: </label>
+      <input class="form-control col-sm-10"
+         id="type" type="text"
+         name="type" value="{{ object.type }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="quantity">quantity: </label>
+      <input class="form-control col-sm-10"
+         id="quantity" type="number"
+         name="quantity" value="{{ object.quantity }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="appFormId">appFormId: </label>
+      {{ form.appFormId }}
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

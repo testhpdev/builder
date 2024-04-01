@@ -1,0 +1,25 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'hoisting_rigging_app_liftDescription_list' %}">
+    liftDescription Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>estimate_calculated_measured</td><td>{{ object.estimate_calculated_measured }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>c_of_g_12_of_load_centre</td><td>{{ object.c_of_g_12_of_load_centre }}</td></tr>
+    <tr><td>load_weight</td><td>{{ object.load_weight }}</td></tr>
+    <tr><td>load_items</td><td>{{ object.load_items }}</td></tr>
+    <tr><td>total_weight</td><td>{{ object.total_weight }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>appFormId</td><td>{{ object.appFormId }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}
