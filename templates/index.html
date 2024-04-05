@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="m-2"><h4>hoisting_rigging_app</h4></div>
-<div class="m-2"><a class="btn btn-light" href="{% url 'hoisting_rigging_app_appForm_list' %}">appForm Listing</a></div>
-<div class="m-2"><a class="btn btn-light" href="{% url 'hoisting_rigging_app_liftDescription_list' %}">liftDescription Listing</a></div>
-<div class="m-2"><a class="btn btn-light" href="{% url 'hoisting_rigging_app_mobileCrane_list' %}">mobileCrane Listing</a></div>
-<div class="m-2"><a class="btn btn-light" href="{% url 'hoisting_rigging_app_overheadCrane_list' %}">overheadCrane Listing</a></div>
-<div class="m-2"><a class="btn btn-light" href="{% url 'hoisting_rigging_app_tools_hardware_list' %}">tools_hardware Listing</a></div>
-<div class='container'>
-<div class='card'>
-<div class='card-body'>
-<div><a href="{% url 'htmx' %}">HTMX UI</a></div>
-</div>
-</div>
-</div>
+<div class="m-2"><h4>page_management</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'page_management_Pages_list' %}">Pages Listing</a></div>
+<div class="m-2"><h4>lift_plan_app</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_equipmentsList_list' %}">equipmentsList Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_liftDescriptions_list' %}">liftDescriptions Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_mobileCrane_list' %}">mobileCrane Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_overheadCrane_list' %}">overheadCrane Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_planAttachment_list' %}">planAttachment Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_planForm_list' %}">planForm Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_planSketch_list' %}">planSketch Listing</a></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'lift_plan_app_workAssignment_list' %}">workAssignment Listing</a></div>
+<div class="m-2"><h4>organization_management</h4></div>
+<div class="m-2"><a class="btn btn-light" href="{% url 'organization_management_User_list' %}">User Listing</a></div>
 {% endblock %}

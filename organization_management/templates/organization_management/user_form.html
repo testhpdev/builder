@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'organization_management_User_list' %}">
+    User Listing
+    </a>
+</p>
+    
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{form.errors}}
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="reporting_manager_name">reporting_manager_name: </label>
+      <input class="form-control col-sm-10"
+         id="reporting_manager_name" type="text"
+         name="reporting_manager_name" value="{{ object.reporting_manager_name }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="reporting_manager_email">reporting_manager_email: </label>
+      <input class="form-control col-sm-10"
+         id="reporting_manager_email" type="text"
+         name="reporting_manager_email" value="{{ object.reporting_manager_email }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="first_time_login">first_time_login: </label>
+      <input class="form-control col-sm-10"
+         id="first_time_login" type="checkbox"
+         name="first_time_login" value="{{ object.first_time_login }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="signature">signature: </label>
+      <input class="form-control col-sm-10"
+         id="signature" type="text"
+         name="signature" value="{{ object.signature }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="created">created: </label>
+      <input class="form-control col-sm-10"
+         id="created" type="datetime-local"
+         name="created" value="{{ object.created }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="reporting_manager_uuid">reporting_manager_uuid: </label>
+      <input class="form-control col-sm-10"
+         id="reporting_manager_uuid" type="text"
+         name="reporting_manager_uuid" value="{{ object.reporting_manager_uuid }}">
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="id">id: </label>
+      <input class="form-control col-sm-10"
+         id="id" type="text"
+         name="id" value="{{ object.id }}" disabled>
+  </div>
+  <div class="form-group row">
+      <label class="col-sm-2 col-form-label" for="last_updated">last_updated: </label>
+      <input class="form-control col-sm-10"
+         id="last_updated" type="datetime-local"
+         name="last_updated" value="{{ object.last_updated }}" disabled>
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary">
+</form>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'lift_plan_app_planAttachment_list' %}">
+    planAttachment Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>file_path</td><td>{{ object.file_path }}</td></tr>
+    <tr><td>file_attachment</td><td>{{ object.file_attachment }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>label</td><td>{{ object.label }}</td></tr>
+    <tr><td>form_id</td><td>{{ object.form_id }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

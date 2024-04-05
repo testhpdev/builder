@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'lift_plan_app_workAssignment_list' %}">
+    workAssignment Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>supervisor_work_assignment_accept</td><td>{{ object.supervisor_work_assignment_accept }}</td></tr>
+    <tr><td>flm_work_assignment_accept</td><td>{{ object.flm_work_assignment_accept }}</td></tr>
+    <tr><td>work_date</td><td>{{ object.work_date }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>work_id</td><td>{{ object.work_id }}</td></tr>
+    <tr><td>flm_work_assignment_accept_date</td><td>{{ object.flm_work_assignment_accept_date }}</td></tr>
+    <tr><td>supervisor_work_assignment_accept_date</td><td>{{ object.supervisor_work_assignment_accept_date }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>form_id</td><td>{{ object.form_id }}</td></tr>
+    <tr><td>lift_personal_flm</td><td>{{ object.lift_personal_flm }}</td></tr>
+    <tr><td>lift_personal_signaler</td><td>{{ object.lift_personal_signaler }}</td></tr>
+    <tr><td>lift_personal_crane_operator</td><td>{{ object.lift_personal_crane_operator }}</td></tr>
+    <tr><td>lift_personal_rigger</td><td>{{ object.lift_personal_rigger }}</td></tr>
+    <tr><td>lift_personal_other_member_2</td><td>{{ object.lift_personal_other_member_2 }}</td></tr>
+    <tr><td>lift_personal_other_member_1</td><td>{{ object.lift_personal_other_member_1 }}</td></tr>
+    <tr><td>lift_personal_supervisior</td><td>{{ object.lift_personal_supervisior }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

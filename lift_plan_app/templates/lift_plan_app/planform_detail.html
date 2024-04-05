@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'lift_plan_app_planForm_list' %}">
+    planForm Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>reason_for_lift</td><td>{{ object.reason_for_lift }}</td></tr>
+    <tr><td>hazardous_or_toxic</td><td>{{ object.hazardous_or_toxic }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>usi_sci</td><td>{{ object.usi_sci }}</td></tr>
+    <tr><td>equipment</td><td>{{ object.equipment }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>form_status</td><td>{{ object.form_status }}</td></tr>
+    <tr><td>swp_jsa</td><td>{{ object.swp_jsa }}</td></tr>
+    <tr><td>special_instructions</td><td>{{ object.special_instructions }}</td></tr>
+    <tr><td>reviewed_by</td><td>{{ object.reviewed_by }}</td></tr>
+    <tr><td>prepared_by</td><td>{{ object.prepared_by }}</td></tr>
+    <tr><td>approved_by</td><td>{{ object.approved_by }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

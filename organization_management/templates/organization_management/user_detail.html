@@ -1,0 +1,24 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'organization_management_User_list' %}">
+    User Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>reporting_manager_name</td><td>{{ object.reporting_manager_name }}</td></tr>
+    <tr><td>reporting_manager_email</td><td>{{ object.reporting_manager_email }}</td></tr>
+    <tr><td>first_time_login</td><td>{{ object.first_time_login }}</td></tr>
+    <tr><td>signature</td><td>{{ object.signature }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>reporting_manager_uuid</td><td>{{ object.reporting_manager_uuid }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}

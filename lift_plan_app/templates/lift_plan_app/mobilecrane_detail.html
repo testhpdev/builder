@@ -1,0 +1,28 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    
+<p>
+    <a class="btn btn-light" href="{% url 'lift_plan_app_mobileCrane_list' %}">
+    mobileCrane Listing
+    </a>
+</p>
+    
+<table class="table">
+    <tr><td>crane_type</td><td>{{ object.crane_type }}</td></tr>
+    <tr><td>block_ball_size</td><td>{{ object.block_ball_size }}</td></tr>
+    <tr><td>boom_sections</td><td>{{ object.boom_sections }}</td></tr>
+    <tr><td>created</td><td>{{ object.created }}</td></tr>
+    <tr><td>manufacturer_restrictions</td><td>{{ object.manufacturer_restrictions }}</td></tr>
+    <tr><td>parts_of_line</td><td>{{ object.parts_of_line }}</td></tr>
+    <tr><td>capacity</td><td>{{ object.capacity }}</td></tr>
+    <tr><td>last_updated</td><td>{{ object.last_updated }}</td></tr>
+    <tr><td>manufacturer</td><td>{{ object.manufacturer }}</td></tr>
+    <tr><td>id</td><td>{{ object.id }}</td></tr>
+    <tr><td>equipment_number</td><td>{{ object.equipment_number }}</td></tr>
+    <tr><td>form_id</td><td>{{ object.form_id }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit</a>
+
+{% endblock %}
