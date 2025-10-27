@@ -34,3 +34,6 @@ Over the past five months, I have demonstrated leadership aligned with the organ
 In the area of Adapt Quickly, Always Learn, I have embraced new technologies and tools with curiosity, participating in proof-of-concepts and experimenting with workflows that improve efficiency. I have demonstrated flexibility in adapting to evolving project requirements and explored innovative approaches to enhance development productivity.
 
 Regarding Unlocking the Potential of Our People, I have supported fellow developers by sharing workflows, templates, and best practices, empowering them to adopt new tools effectively. By fostering collaboration, knowledge sharing, and a culture of learning, I contribute to team growth and high performance.
+
+
+I have contributed significantly to delivering high-quality features, improving system design, and implementing GenAI-driven workflows to enhance testing, documentation, and development efficiency. By supporting fellow developers, sharing best practices, and fostering knowledge sharing, I have helped the team adopt new tools effectively. Combining hands-on technical work with leadership initiatives, I aim to drive scalable solutions, streamline processes, and enable innovation, ensuring high-quality outcomes and sustained impact for both the team and the organization.
